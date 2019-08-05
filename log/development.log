@@ -980,3 +980,1842 @@ app/helpers/sessions_helper.rb:19:in `current_user'
 app/helpers/sessions_helper.rb:33:in `logged_in?'
 app/views/layouts/_header.html.erb:7:in `_app_views_layouts__header_html_erb___2013069647440036129_70031343597540'
 app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___3101433755657030676_70031326691100'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "test1@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "test1@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testone@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testone@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "testone"], ["email", "testone@test.com"], ["password_digest", "$2a$12$9V60AKW/L6eMfF/23B0qWeOpp.vizjglYK9ZAsaIcgaol37hirHrG"], ["created_at", "2019-08-04 18:40:49.339012"], ["updated_at", "2019-08-04 18:40:49.339012"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testtwo@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "testtwo"], ["email", "testtwo@test.com"], ["password_digest", "$2a$12$yO2CUDC5S7T1PBav7Pt15uUUQtK4SfUIvtLIBudT8FLkAb7tLfIAK"], ["created_at", "2019-08-04 18:47:49.672476"], ["updated_at", "2019-08-04 18:47:49.672476"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testthree@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "testthree"], ["email", "testthree@test.com"], ["password_digest", "$2a$12$b0xECuVd40NCicWmdFhsrOx6LJrgUccEgSyyjtpgAo6qkP7T9vb.2"], ["created_at", "2019-08-04 18:49:18.326504"], ["updated_at", "2019-08-04 18:49:18.326504"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testfour@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testfour@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testfour@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "remember_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testfour"], ["email", "testfour@test.com"], ["password_digest", "$2a$12$1sMjOFehdj9wiIDlAic/9e6unewosWcPhKuQUDzy5FCQVqnwbYlUm"], ["created_at", "2019-08-04 18:53:44.231353"], ["updated_at", "2019-08-04 18:53:44.231353"], ["remember_digest", "ddfd4749660dddde94dfc3bf978d384ee7dd79b0"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "remember_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testfive"], ["email", "testfive@test.com"], ["password_digest", "$2a$12$PKBrXcBpbCgqec7./tz.1OJz3qi39YArhiF9PymSLfMJqBb5wczuu"], ["created_at", "2019-08-04 19:03:42.186269"], ["updated_at", "2019-08-04 19:03:42.186269"], ["remember_digest", "ff2f08c8be76851c9863a18511b8a2f17db72961"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:05:25 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (31.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18
+  Rendered layouts/_header.html.erb (121.8ms)
+Completed 500 Internal Server Error in 1420ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (invalid hash):
+    4:     <nav>
+    5:       <ul class="nav navbar-nav navbar-right">
+    6:         
+    7:         <% if logged_in? %>
+    8:             <ul>
+    9:               <li>
+   10:                 <%= link_to "Log out", logout_path, method: :delete %>
+  
+app/models/user.rb:32:in `new'
+app/models/user.rb:32:in `authenticated?'
+app/helpers/sessions_helper.rb:19:in `current_user'
+app/helpers/sessions_helper.rb:33:in `logged_in?'
+app/views/layouts/_header.html.erb:7:in `_app_views_layouts__header_html_erb__3281574719420753798_70268534224340'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__1240449823048371140_70268517626520'
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:06:44 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18
+  Rendered layouts/_header.html.erb (56.7ms)
+Completed 200 OK in 124ms (Views: 118.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:07:01 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QwrTgH61gPRBNDBxgMtRjjJCPNYpzc8dBS0Qy1Vnxj6IUV8790EwA55mSJUXaFdsKdjUgo3I1GaC+unP10PYnw==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:21
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["updated_at", "2019-08-04 19:07:02.369737"], ["id", 7]]
+  ↳ app/models/user.rb:21
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:21
+Redirected to http://localhost:3000/post
+Completed 302 Found in 1015ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:07:02 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 119ms (Views: 104.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 22:07:08 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"feqrgVIfpiJQaPagQc7ABVgWqzt8sxkN9yjC7yAEVqi2sSc62+sW1Y86jkTWbcbnQ4xDb9i2AnZw/zvroiBICQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-04 19:07:08.443352"], ["id", 7]]
+  ↳ app/models/user.rb:37
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37
+Redirected to http://localhost:3000/post
+Completed 302 Found in 23ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:07:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 118ms (Views: 111.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:07:11 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:07:15 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JPllH1YYBXb6epkTWZkMRPbgRga5T7d0cy0eATLEn4GrzGVLRQAqdOJ/qTaUWtLKBIsOqw1xXDZHb+kYivsUoA==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:21
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["updated_at", "2019-08-04 19:07:16.355871"], ["id", 7]]
+  ↳ app/models/user.rb:21
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:21
+Redirected to http://localhost:3000/post
+Completed 302 Found in 572ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:07:16 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (4.2ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 22:07:36 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Sumgpj1kVW47TwYVB2KIQha+kaUs5MjAQIyPGpq9ocSBsiwdtJDlmeQdfvGQwY6gDSR58Yjh07vHW3YeGJm/ZQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-04 19:07:36.949172"], ["id", 7]]
+  ↳ app/models/user.rb:36
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:36
+Redirected to http://localhost:3000/post
+Completed 302 Found in 32ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:07:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:07:38 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:07:43 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wkr0AUvEA0chc5Gvc/qvWUDdIsUS+ZmkrqF8wgsDJ0nVf/RVWNwsRTl2oYq+OXHXsrZqaKbHcuaa44vbszysaA==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:21
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["updated_at", "2019-08-04 19:07:44.072671"], ["id", 7]]
+  ↳ app/models/user.rb:21
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:21
+Redirected to http://localhost:3000/post
+Completed 302 Found in 575ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:07:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 22:07:46 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sWE6HcSRYDCzoCBBPSiXUdtybTu1XIWmPPkE22QSUqp6OramTWXQx2zyWKWqi5GzwOiFbxFZnt27Lv3f5jZMCw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-04 19:07:46.480441"], ["id", 7]]
+  ↳ app/models/user.rb:36
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:36
+Redirected to http://localhost:3000/post
+Completed 302 Found in 10ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:07:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (8.4ms)
+Completed 200 OK in 118ms (Views: 115.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:09:46 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 106ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:09:50 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q6y80WCUxoWHUK9obmYqv4ybVIVIvLgOIgaySOAGEdYkmbyFc4zph59Vn02jpfQxfvAcKPyCU0wWREVRWDma9w==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "00a0d43f839fb7ee6022855bccd556c8efa99043"], ["updated_at", "2019-08-04 19:09:51.031243"], ["id", 7]]
+  ↳ app/models/user.rb:22
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:22
+Redirected to http://localhost:3000/post
+Completed 302 Found in 805ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:09:51 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (6.2ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 22:09:53 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPFMgnH+7oNt2ZBB6vsv8NEkdrdRmkLvFomam3w7KyjfqsA5+ApedLKL6KV9WCkSyr6e4/WfWZSRXmOf/h81iQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-04 19:09:53.419917"], ["id", 7]]
+  ↳ app/models/user.rb:36
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:36
+Redirected to http://localhost:3000/post
+Completed 302 Found in 21ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:09:53 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 89ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:09:55 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:09:59 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bhWKfAFq8h4nOB0kD3I0H0xtjvcEF793fD3ljkRmpVHhIIooEnLdHD89LQHCseqRvgbGWrApVDVIfxKX/FkucA==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "9bf608472748fd917c05c02061b12c413672cbc8"], ["updated_at", "2019-08-04 19:10:00.239162"], ["id", 7]]
+  ↳ app/models/user.rb:22
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:22
+Redirected to http://localhost:3000/post
+Completed 302 Found in 397ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:10:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 22:17:17 +0300
+  
+SyntaxError (/home/danie/Documents/MV/Authentication/app/helpers/sessions_helper.rb:45: syntax error, unexpected end-of-input, expecting end):
+  
+app/helpers/sessions_helper.rb:45: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/sessions_controller.rb:1:in `<main>'
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:17:58 +0300
+  
+SyntaxError (/home/danie/Documents/MV/Authentication/app/helpers/sessions_helper.rb:45: syntax error, unexpected end-of-input, expecting end):
+  
+app/helpers/sessions_helper.rb:45: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/sessions_controller.rb:1:in `<main>'
+Started GET "/logout" for 127.0.0.1 at 2019-08-04 22:18:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:18:31 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (24.2ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:18:36 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NdQ5VwYPzAnMEepVKdOHqVAF5f1VZlOEm99HrmQvCkr+j7Xsj/t8/hNDkrG+cIFLS58NqfFjSP8cCL6q5gsU6w==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "622d530159c5276593e056feb71649e18c07f7e4"], ["updated_at", "2019-08-04 19:18:37.001788"], ["id", 7]]
+  ↳ app/models/user.rb:22
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:22
+Redirected to http://localhost:3000/post
+Completed 302 Found in 385ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:18:37 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 22:18:39 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h11Dy+WnoE0nEqvOarPYq5Tx3oQdiVYDpevm4JsJhx1MBs9wbFMQuvhA0yr9EN5Jj2s20LmMTXgiPB/kGS2ZvA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-04 19:18:39.898949"], ["id", 7]]
+  ↳ app/models/user.rb:36
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:36
+Redirected to http://localhost:3000/post
+Completed 302 Found in 22ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:18:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:18:41 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 84ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:18:59 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:19:02 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WBwX9RhSADYesSK3uoseIRcXzikE/HAljhpt6c/vsQyTR5tOkaawwcHjWlMtKBjDDI0mfaD5a14JzZTtTcuvrQ==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "08cdeaebac254f199ff02949b89e7c93333b8764"], ["updated_at", "2019-08-04 19:19:02.916842"], ["id", 7]]
+  ↳ app/models/user.rb:22
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:22
+Redirected to http://localhost:3000/post
+Completed 302 Found in 399ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:19:02 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:19:16 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (4.1ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 22:19:20 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6tlf7g12rA++YQPOyvMhJRoQDKm2nwv3GMOjrpprXEAhgtNVhIIc+GEzeypdUCfHAYrk/RKaEIyfFFqqGE9C4Q=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-04 19:19:20.888619"], ["id", 7]]
+  ↳ app/models/user.rb:36
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:36
+Redirected to http://localhost:3000/post
+Completed 302 Found in 9ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:19:20 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:19:27 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testsix@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "remember_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testsix"], ["email", "testsix@test.com"], ["password_digest", "$2a$12$CPoemr70gd8zersyv04FP.hkVBj8q5GklRCSpYmQG8rpu83ESDDD2"], ["created_at", "2019-08-04 19:32:03.878921"], ["updated_at", "2019-08-04 19:32:03.878921"], ["remember_digest", "469230c6eea179f8fe700276b99ba4c0623957ab"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:33:30 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (8.5ms)
+Completed 200 OK in 304ms (Views: 293.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:33:37 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MzWCN27QACLmvAf7pJAsQvqc/cjbQFc4pcoqq+E2sKf4bg6M5ySw1Tnufx8zMyqg4QYVnH9FTEMiHdOvYxKuBg==", "session"=>{"email"=>"testsix@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testsix@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "fb66d4c16c076d6ecd05694505748f803a245fdb"], ["updated_at", "2019-08-04 19:33:38.380111"], ["id", 8]]
+  ↳ app/models/user.rb:22
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:22
+Redirected to http://localhost:3000/post
+Completed 302 Found in 414ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:33:38 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 22:33:47 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/UwiiqEZO4iwsiGD+KUAJC7pcNVVgqr8wP5HzczG4vY2F64xKO2Lf2/gWWdvBgbGNXOYgfGHsYdHKb7JTuL8Vw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-04 19:33:47.367066"], ["id", 8]]
+  ↳ app/models/user.rb:41
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:41
+Redirected to http://localhost:3000/post
+Completed 302 Found in 23ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:33:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:33:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:33:59 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JgzclvHGBEhSJxG9rt30g34JILNrxeskGFpFfAwIYBCpOdzC4t4rSkoiIZhjHioNjGJoHt/7AGYsGLJltDfrMQ==", "session"=>{"email"=>"testseven@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testseven@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testseven@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "remember_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testseven"], ["email", "testseven@test.com"], ["password_digest", "$2a$12$QLn1gyApy9sWVD0PIVvDzOxXSoBvtiyxIWboI8sfA6V74owPQpDsy"], ["created_at", "2019-08-04 19:35:31.877156"], ["updated_at", "2019-08-04 19:35:31.877156"], ["remember_digest", "a85b764f4a67ed422a18a0b8d08b395df0517558"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:35:53 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PtN4hssZ2ljhdvExZBnfE+WTjOCn9xgwJFcqGW9Q23f1iPQ9Qu1qrz4kidXzutnx/glktAPyA0ujgNMd7XTF1g==", "session"=>{"email"=>"testseven@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testseven@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "7c4c59d9cdaba01cb1434727eeb9d5f1fdb5f985"], ["updated_at", "2019-08-04 19:35:53.398912"], ["id", 9]]
+  ↳ app/models/user.rb:22
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:22
+Redirected to http://localhost:3000/post
+Completed 302 Found in 388ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:35:53 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 22:35:58 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u1HBGvosMyVDXUvRP8Ep7fpUJS2YpZqL0WvxfZf0prRwCk2hc9iD0pwPMzWoYi8P4c7NeTyggfBWvAh5FdC4FQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-04 19:35:58.817964"], ["id", 9]]
+  ↳ app/models/user.rb:41
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:41
+Redirected to http://localhost:3000/post
+Completed 302 Found in 20ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:35:58 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testseven@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "testeight@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "remember_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testeight"], ["email", "testeight@test.com"], ["password_digest", "$2a$12$yciqhakdWfErvUvNauKJZ.7HV0gMkKKdwjevm/SKXX00u9dNcv9MC"], ["created_at", "2019-08-04 19:39:43.622540"], ["updated_at", "2019-08-04 19:39:43.622540"], ["remember_digest", "a03a6c1b91ccff36653a2b7cdd741a9692b3e81e"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/login" for 127.0.0.1 at 2019-08-04 22:39:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 22:39:58 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b8joKqmYHt9Aw4TQoJ0Mwgk9YTcftjk+r5gQoD3z5CLg/eh+uoAx3VjGtPVtXtJM+1YpmquI0nyb2ue5hcxvAw==", "session"=>{"email"=>"testeight@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testeight@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "3bf02a05424f755785ecbc84754b925421d9424d"], ["updated_at", "2019-08-04 19:39:59.184898"], ["id", 10]]
+  ↳ app/models/user.rb:22
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:22
+Redirected to http://localhost:3000/post
+Completed 302 Found in 405ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:39:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 22:41:54 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rAIoAWcoX9zBx/3w8REXhPEeJFAkQ/m/qNx+/cCvoqlnWaS67tzvKx6VhRRmshFm6oTMBIBG4sQvC4f5Qou8CA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-04 19:41:54.699186"], ["id", 10]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:36
+Redirected to http://localhost:3000/post
+Completed 302 Found in 19ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 22:41:54 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-04 23:21:49 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 1062ms (Views: 1037.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 23:21:56 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9HsKRiaxJyk/401iGTaf9/7ne553mGURUbzO5aHL9lVmfZPOkxJRUiGebM8eKo993y56iNhl7lZH8SQElRt7hQ==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 566ms (Views: 43.0ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-04 23:22:06 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vn/ErV7ETpTKdVUJhd1rLFYHFp4/0/1v6x4/xWvRGTOu74wXdQCEgvndzwlBRIOZLvN8Eb2x4aRBGXJwhtjeLg==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "c579b6e0653000d7572e53d32504882b291154dd"], ["updated_at", "2019-08-04 20:22:07.309146"], ["id", 7]]
+  ↳ app/models/user.rb:22
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:22
+Redirected to http://localhost:3000/post
+Completed 302 Found in 355ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 23:22:07 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 46ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-04 23:22:09 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F5mcRHlHVIgq97QDqGlctuohjmZX4A80vqzKxf1Ca8cHCdT+UoOenhlfLgNs8LQDktXk6dWCE/8Uq4dwEEus2g=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (3.2ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-04 20:22:09.521431"], ["id", 7]]
+  ↳ app/models/user.rb:36
+  [1m[35m (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:36
+Redirected to http://localhost:3000/post
+Completed 302 Found in 26ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-04 23:22:09 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-08-05 14:04:22 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (6.4ms)
+Completed 200 OK in 2075ms (Views: 2038.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-05 14:04:34 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (38.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 128ms (Views: 95.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-05 14:04:39 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ue0amnflYeLF+CPPksZYoJBk29NwGIJXJkli0HAQBndQQ34GA/PHpXClVGhN2p2bKYAClio9nznDUewbDqU7Q==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "cbdbb22e07ad51b13af7ad2341cb1fba4262d2db"], ["updated_at", "2019-08-05 11:04:39.836253"], ["id", 7]]
+  ↳ app/models/user.rb:22
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:22
+Redirected to http://localhost:3000/post
+Completed 302 Found in 353ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 14:04:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-05 14:04:44 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4LXwpnaHCFcWWvcu1ODSiNHqIDeKIoYR/2uI5MfcG+l0aOpyI90xuYCNUJL7i4pITRIrKPnFF+vDZeYnTUrNDw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-05 11:04:44.234788"], ["id", 7]]
+  ↳ app/models/user.rb:36
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:36
+Redirected to http://localhost:3000/post
+Completed 302 Found in 14ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 14:04:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-08-05 14:23:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/posts/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/post/new" for 127.0.0.1 at 2019-08-05 14:23:48 +0300
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-05 14:23:48 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-05 14:23:51 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Hz7qC6xbEI6GTRaIHJr9Z6ab+fkv/DmMR4WC0Uza6lEoeF8e+tVrKzOk+YPGTM1AmJk+JdYYRwNEHjIz6W9Tw==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:22
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "8b9aaeeab1978566ca2e7923058a5e7aeee3b989"], ["updated_at", "2019-08-05 11:23:51.734202"], ["id", 7]]
+  ↳ app/models/user.rb:22
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:22
+Redirected to http://localhost:3000/post
+Completed 302 Found in 324ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 14:23:51 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post/new" for 127.0.0.1 at 2019-08-05 14:23:56 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/danie/Documents/MV/Authentication/app/views/posts/new.html.erb:7: syntax error, unexpected tCONSTANT, expecting ')'
+...er.append=( f.label :Post Title );@output_buffer.safe_append...
+...                          ^~~~~):
+  
+app/views/posts/new.html.erb:7: syntax error, unexpected tCONSTANT, expecting ')'
+Started GET "/post/new" for 127.0.0.1 at 2019-08-05 14:24:17 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (173.1ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007f45281d3d18>:0x00007f4535b618a0>
+Did you mean?  post_path):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@post) do |f| %>
+    6: 
+    7:       <%= f.label :Title %>
+    8:       <%= f.text_field :title, class: 'form-control' %>
+  
+app/views/posts/new.html.erb:5:in `_app_views_posts_new_html_erb___2766219380455876332_69967615299720'
+Started GET "/post/new" for 127.0.0.1 at 2019-08-05 14:28:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/post/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/new" for 127.0.0.1 at 2019-08-05 14:28:47 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (32.7ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Post id: nil, created_at: nil, updated_at: nil>):
+     5:     <%= form_for(@post) do |f| %>
+     6: 
+     7:       <%= f.label :Title %>
+     8:       <%= f.text_field :title, class: 'form-control' %>
+     9: 
+    10:       <%= f.label :body %>
+    11:       <%= f.text_area :body, class: 'form-control' %>
+  
+app/views/posts/new.html.erb:8:in `block in _app_views_posts_new_html_erb___2766219380455876332_69967619272180'
+app/views/posts/new.html.erb:5:in `_app_views_posts_new_html_erb___2766219380455876332_69967619272180'
+Started GET "/posts/new" for 127.0.0.1 at 2019-08-05 14:33:44 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddTitleAndBodyToPosts (20190805113144)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (35.0ms)[0m  [1m[35mALTER TABLE "posts" ADD "title" varchar[0m
+  ↳ db/migrate/20190805113144_add_title_and_body_to_posts.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "posts" ADD "body" varchar[0m
+  ↳ db/migrate/20190805113144_add_title_and_body_to_posts.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190805113144"]]
+  ↳ bin/rails:9
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/posts/new" for 127.0.0.1 at 2019-08-05 14:34:06 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (25.9ms)
+  Rendered layouts/_header.html.erb (11.3ms)
+Completed 200 OK in 111ms (Views: 63.9ms | ActiveRecord: 3.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddUserIdToPosts (20190805113552)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "posts" ADD "user_id" integer[0m
+  ↳ db/migrate/20190805113552_add_user_id_to_posts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190805113552"]]
+  ↳ bin/rails:9
+  [1m[35m (26.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/posts/new" for 127.0.0.1 at 2019-08-05 14:46:04 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 171ms (Views: 55.7ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2019-08-05 14:46:17 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hu0g5Dddm6ftrztGtExoJbl0fxnxKb+NRkHmT4wS+jkSMDowYgeiSXt4nPqbJzDlJYx0BoLOLnd6T4iMBoQs3w==", "post"=>{"title"=>"Post1", "body"=>"This is the first post"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `user_id' for #<User:0x00007f452c4fe1b0>):
+  
+app/controllers/posts_controller.rb:12:in `create'
+Started GET "/posts/new" for 127.0.0.1 at 2019-08-05 14:47:16 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (49.1ms)
+Completed 200 OK in 145ms (Views: 89.0ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2019-08-05 14:47:27 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zy4v5cdMdAaqamOk3cTr15RyiyoJbh2tWuvjGO1BXfBb8zUxkhZN6Dy9xBjyr7MXCIqANXqJjFdm5Y3bZ9eLFg==", "post"=>{"title"=>"First POst", "body"=>"POst one"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("created_at", "updated_at", "title", "body", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-08-05 11:47:27.780389"], ["updated_at", "2019-08-05 11:47:27.780389"], ["title", "First POst"], ["body", "POst one"], ["user_id", 7]]
+  ↳ app/controllers/posts_controller.rb:13
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:13
+Redirected to http://localhost:3000/post.1
+Completed 302 Found in 92ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/post.1" for 127.0.0.1 at 2019-08-05 14:47:27 +0300
+Processing by PostsController#index as 
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 92ms (Views: 79.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ? LIMIT ?[0m  [["user_id", 4], ["LIMIT", 11]]
+Started GET "/post" for 127.0.0.1 at 2019-08-05 14:56:06 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/danie/Documents/MV/Authentication/app/views/posts/index.html.erb:6: syntax error, unexpected ')', expecting then or ';' or '\n'
+...buffer.append=( if logged_in? );@output_buffer.safe_append='
+...                              ^
+/home/danie/Documents/MV/Authentication/app/views/posts/index.html.erb:8: syntax error, unexpected end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/home/danie/Documents/MV/Authentication/app/views/posts/index.html.erb:12: syntax error, unexpected end, expecting ')'
+'.freeze;   end 
+            ^~~
+/home/danie/Documents/MV/Authentication/app/views/posts/index.html.erb:15: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/danie/Documents/MV/Authentication/app/views/posts/index.html.erb:17: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/index.html.erb:6: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/posts/index.html.erb:8: syntax error, unexpected end
+app/views/posts/index.html.erb:12: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:15: syntax error, unexpected ensure, expecting ')'
+app/views/posts/index.html.erb:17: syntax error, unexpected end, expecting ')'
+Started GET "/posts" for 127.0.0.1 at 2019-08-05 14:56:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/post" for 127.0.0.1 at 2019-08-05 14:56:29 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/danie/Documents/MV/Authentication/app/views/posts/index.html.erb:6: syntax error, unexpected ')', expecting then or ';' or '\n'
+...buffer.append=( if logged_in? );@output_buffer.safe_append='
+...                              ^
+/home/danie/Documents/MV/Authentication/app/views/posts/index.html.erb:8: syntax error, unexpected end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/home/danie/Documents/MV/Authentication/app/views/posts/index.html.erb:12: syntax error, unexpected end, expecting ')'
+'.freeze;   end 
+            ^~~
+/home/danie/Documents/MV/Authentication/app/views/posts/index.html.erb:15: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/danie/Documents/MV/Authentication/app/views/posts/index.html.erb:17: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/index.html.erb:6: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/posts/index.html.erb:8: syntax error, unexpected end
+app/views/posts/index.html.erb:12: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:15: syntax error, unexpected ensure, expecting ')'
+app/views/posts/index.html.erb:17: syntax error, unexpected end, expecting ')'
+Started GET "/post" for 127.0.0.1 at 2019-08-05 14:57:23 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Index page for posts<h1>
+    2: 
+    3: <ul>
+    4:   <% @posts.each do |post| %>
+    5:     <li>
+    6:         <% if logged_in? %>
+    7:         <%= post.user.name %>
+  
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__4192270570829086485_69967609876280'
+Started GET "/post" for 127.0.0.1 at 2019-08-05 14:58:02 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (33.8ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 81ms (Views: 74.4ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-05 14:59:11 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9SdyYmYzozrudrxA8KA12ERHa7QZICN71IjgorXkQLph+mi2M2ma1HihG/zfy20Y2L9gq2rHsoHoho5hP3KWXA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-05 11:59:11.913585"], ["id", 7]]
+  ↳ app/models/user.rb:37
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37
+Redirected to http://localhost:3000/post
+Completed 302 Found in 14ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 14:59:11 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-05 14:59:20 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-05 14:59:23 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DoadcF04BysHNDetPfWtligorD9WfkTFzxc7A3JnuZwhICTiLOhdshnhQnOiid6Cxs8/WkMW0LB0g1k4X51taA==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "b92f5bc4c1e6ec00811ec570c209273bb3901e93"], ["updated_at", "2019-08-05 11:59:23.605403"], ["id", 7]]
+  ↳ app/models/user.rb:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23
+Redirected to http://localhost:3000/post
+Completed 302 Found in 288ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 14:59:23 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (38.3ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 76ms (Views: 72.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-05 14:59:28 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y/kznytltXVTrwnLu9DzJAGhaPDctDF2z7Vw8Q1B37b3JClLfj+Mm8V4rneUu6vknVlj769ToIzzux4yh9cJUA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-05 11:59:28.698002"], ["id", 7]]
+  ↳ app/models/user.rb:37
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37
+Redirected to http://localhost:3000/post
+Completed 302 Found in 12ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 14:59:28 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:02:36 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/danie/Documents/MV/Authentication/app/assets/config
+  /home/danie/Documents/MV/Authentication/app/assets/images
+  /home/danie/Documents/MV/Authentication/app/assets/javascripts
+  /home/danie/Documents/MV/Authentication/app/assets/stylesheets
+  /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionview-5.2.3/lib/assets/compiled
+  /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/danie/Documents/MV/Authentication/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/custom.scss:1
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___971470744102149222_69967613712660'
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:03:19 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danie/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 5709ms (Views: 5697.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:04:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 1620ms (Views: 1618.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-05 15:04:43 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-05 15:05:47 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-05 15:05:51 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hduuIe4HI/SJGAxWCwD1L2cQRcfswVaePZSGbdFZEXcRBrT1u10aGh/Pq+oka63v++hO2J8mx2QBmuiuW8/HkQ==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "37e48dec8c7bb12afb48c73047aba5b9b67e703c"], ["updated_at", "2019-08-05 12:05:51.533269"], ["id", 7]]
+  ↳ app/models/user.rb:23
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23
+Redirected to http://localhost:3000/post
+Completed 302 Found in 296ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:05:51 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 146ms (Views: 142.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:06:30 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:06:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:07:02 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-05 15:07:18 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DGAH47Daa/DZOxOBYGgVtk3aQ70ERFi9GwjYsudETLeYvR035YBSHk/stD1PA0120SJIonejyUcnBrZxbdKaUQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-05 12:07:18.037408"], ["id", 7]]
+  ↳ app/models/user.rb:37
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37
+Redirected to http://localhost:3000/post
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:07:18 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-05 15:07:22 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (6.7ms)
+Completed 200 OK in 62ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-05 15:07:25 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YzTEIb2IncBA3LMh8WR2ozU5Mtjtwg2W5S5y2JtQKfxMkn2zzFjHWV4Jxv9uGAW3296hvfiqmeNeuhDjtqr9CA==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "7679e222351a9aaaebe2597b8d19f01cb4731b16"], ["updated_at", "2019-08-05 12:07:25.609378"], ["id", 7]]
+  ↳ app/models/user.rb:23
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23
+Redirected to http://localhost:3000/post
+Completed 302 Found in 283ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:07:25 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 97ms (Views: 94.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:08:20 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:13:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:8
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 67.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:16:53 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:8
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:18:11 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:8
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:18:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:8
+  Rendered posts/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:18:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:19:37 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:20:17 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-08-05 15:20:46 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v1L41DA/7QaJVL9cs6blCJbAooFdVN1ldesr7EnZCOgrj+IAZWXU6B+DGOCczb3ICjipni6zTJ9J5UUvw0/eDg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-08-05 12:20:46.340493"], ["id", 7]]
+  ↳ app/models/user.rb:37
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37
+Redirected to http://localhost:3000/post
+Completed 302 Found in 8ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:20:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-08-05 15:20:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-08-05 15:20:51 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"smYeFbZKIFMSnKHPJVjFIjDULb98eSWHqiY+oJBorZedwKeHx5p6ygxJ1BG6JLY23jO+2mkRsfIRslybvZJ5Yw==", "session"=>{"email"=>"testfive@test.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testfive@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "09514b50c020c5ee571119ac541b9f36b5556355"], ["updated_at", "2019-08-05 12:20:51.724218"], ["id", 7]]
+  ↳ app/models/user.rb:23
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23
+Redirected to http://localhost:3000/post
+Completed 302 Found in 295ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:20:51 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:22:17 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-08-05 15:22:19 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 80ms (Views: 76.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-08-05 15:23:43 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:23:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:24:07 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/danie/Documents/MV/Authentication/app/views/layouts/_header.html.erb:9: syntax error, unexpected '='
+...k_to "Home", post_path , class="text-left");@output_buffer.s...
+...                              ^):
+  
+app/views/layouts/_header.html.erb:9: syntax error, unexpected '='
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__1264148955579654444_69952135494500'
+Started GET "/post" for 127.0.0.1 at 2019-08-05 15:24:43 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+

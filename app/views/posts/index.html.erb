@@ -1,1 +1,19 @@
+<div class="container">
 <h1>Index page for posts<h1>
+
+<div>
+  <% @posts.each do |post| %>
+        <% if logged_in? %>
+        <p>Created by: &nbsp<%= post.user.name %></p>
+        <p>At &nbsp<%= post.updated_at %></p>
+        <% end %>
+        <h2 class="blog-post-title"><%= post.title %></h2>
+        
+        <ul class="list-group">
+          <li class="list-group-item"><%= post.body %></li>
+        </ul>
+    </li>
+    <a class="btn btn-primary" href="/posts/new" role="button">Create Post</a>
+  <% end %>
+</div>
+</div>
