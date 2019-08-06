@@ -13,7 +13,7 @@ class PostsController < ApplicationController
         @post.user_id = session[:user_id]
         if @post.save
             flash[:success] = "Your Post has been created!"
-            redirect_to @post
+            redirect_to root_path
         else
             render 'new'
         end
