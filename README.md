@@ -3,29 +3,29 @@
 
 This is a mini project done to practice Rails authentication system.
 
-# Features
+### Features
 
 
 
-# Technologies
+### Technologies
 
 
-# Setup
+### Setup
 
-# Live Demo
+### Live Demo
 
-# Screen Shots
+### Screen Shots
 
-# Contribute
+### Contribute
 
-# Author
+### Author
 * [Rajasekhar K ](https://github.com/IBTechRaj)
 
 Github: https://github.com/IBTechRaj
 * Email : krs30018@gmail.com 
 * raj_shk@rediffmail.com
 
-# Follow Me
+### Follow Me
 
 * [LinkedIn](https://www.linkedin.com/in/rajkatakamsetty/)
 * [Twitter](https://twitter.com/IBTechRaj)
