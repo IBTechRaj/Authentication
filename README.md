@@ -1,24 +1,31 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails Authentication
 
-Things you may want to cover:
+This is a mini project done to practice Rails authentication system.
 
-* Ruby version
+# Features
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+# Technologies
 
-* Database initialization
 
-* How to run the test suite
+# Setup
 
-* Services (job queues, cache servers, search engines, etc.)
+# Live Demo
 
-* Deployment instructions
+# Screen Shots
 
-* ...
+# Contribute
+
+# Author
+* [Rajasekhar K ](https://github.com/IBTechRaj)
+
+Github: https://github.com/IBTechRaj
+* Email : krs30018@gmail.com 
+* raj_shk@rediffmail.com
+
+# Follow Me
+
+* [LinkedIn](https://www.linkedin.com/in/rajkatakamsetty/)
+* [Twitter](https://twitter.com/IBTechRaj)
